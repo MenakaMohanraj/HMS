@@ -116,8 +116,12 @@ body {
   .inner-title h2 {
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "slab", Arial, Helvetica, sans-serif; }
+  .login{
+      color: #6C63FF;
+      font-size: 3rem;
+      text-transform: capitalize; }
   .inner-title p {
     width: 100%;
     text-align: center; }
@@ -149,31 +153,31 @@ body {
       color: #444; }
 
 .btn-success {
-  background-color: #00ab9f;
-  border-color: #00ab9f; }
+  background-color: var(--purple);
+  border-color: var(--purple); }
   .btn-success:hover {
-    background-color: #00ab9f !important;
-    border-color: #00ab9f !important; }
+    background-color: var(--dark-purple) !important;
+    border-color: var(--dark-purple) !important; }
   .btn-success:active {
-    background-color: #00ab9f !important;
-    border-color: #00ab9f !important; }
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important; }
   .btn-success:focus {
-    background-color: #00ab9f !important;
-    border-color: #00ab9f !important;
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important;
     box-shadow: none !important; }
 
 .btn-info {
-  background-color: #00a8df;
-  border-color: #00a8df; }
+  background-color: var(--purple);
+  border-color: var(--purple); }
   .btn-info:hover {
-    background-color: #00a8df !important;
-    border-color: #00a8df !important; }
+    background-color: var(--dark-purple) !important;
+    border-color: var(--dark-purple) !important; }
   .btn-info:active {
-    background-color: #00a8df !important;
-    border-color: #00a8df !important; }
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important; }
   .btn-info:focus {
-    background-color: #00a8df !important;
-    border-color: #00a8df !important;
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important;
     box-shadow: none !important; }
 
 .btn {
@@ -182,7 +186,7 @@ body {
 
 .form-control:focus {
   box-shadow: none !important;
-  border: 2px solid  #00a8df; }
+  border: 2px solid #6C63FF; }
 
 .btn-light {
   background-color: #FFF;
@@ -246,7 +250,7 @@ header {
 
 .small-menu {
   float: right;
-  color: #00ab9f;
+  color: var(--purple);
   font-size: 32px;
   margin-top: 17px;
   margin-right: 12px; }
@@ -256,100 +260,147 @@ header {
 
 /* ===================================== Slide Style CSS ================================== */
 .slider-detail {
-  padding-top: 0px; }
+  padding-top: 0px;
+}
+
+.slider-detail .carousel-cover {
+  background-color: rgba(108, 99, 255, 0.7); /* Semi-transparent purple */
+  position: absolute;
+  left: -30%;
+  width: 80%;
+  top: -150px;
+  height: 140%;
+  transform: rotate(15deg);
+}
+
+@media screen and (max-width: 1086px) {
   .slider-detail .carousel-cover {
-    background-color: rgba(0, 173, 162, 0.53);
-    position: absolute;
-    left: 0px;
-    width: 40%;
-    top: 50px;
-    height: 100%;
-    background-color: rgba(0, 173, 162, 0.53);
-    position: absolute;
-    left: -30%;
-    width: 80%;
-    top: -150px;
-    height: 140%;
-    transform: rotate(15deg); }
-    @media screen and (max-width: 1086px) {
-      .slider-detail .carousel-cover {
-        top: -131px;
-        left: -24%;
-        transform: rotate(12deg); } }
-    @media screen and (max-width: 999px) {
-      .slider-detail .carousel-cover {
-        transform: rotate(7deg);
-        top: -100px; } }
-    @media screen and (max-width: 767px) {
-      .slider-detail .carousel-cover {
-        display: none; } }
+      top: -131px;
+      left: -24%;
+      transform: rotate(12deg);
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .slider-detail .carousel-cover {
+      transform: rotate(7deg);
+      top: -100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider-detail .carousel-cover {
+      display: none;
+  }
+}
+
+.slider-detail .carousel-caption {
+  text-align: left;
+  top: 70px;
+  left: 10%;
+  max-width: 40%;
+}
+
+.slider-detail .carousel-caption h5 {
+  font-size: 40px;
+}
+
+.slider-detail .carousel-caption p {
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.slider-detail .carousel-caption .vbh {
+  margin: 0px;
+}
+
+@media screen and (max-width: 1090px) {
   .slider-detail .carousel-caption {
-    text-align: left;
-    top: 70px;
-    left: 10%;
-    max-width: 40%; }
-    .slider-detail .carousel-caption h5 {
-      font-size: 40px; }
-    .slider-detail .carousel-caption p {
-      font-size: 18px;
-      margin-top: 40px;
-      margin-bottom: 40px; }
-    .slider-detail .carousel-caption .vbh {
-      margin: 0px; }
-    @media screen and (max-width: 1090px) {
-      .slider-detail .carousel-caption {
-        top: 30px; }
-        .slider-detail .carousel-caption h5 {
-          font-size: 28px; }
-        .slider-detail .carousel-caption p {
-          font-size: 14px; } }
-    @media screen and (max-width: 792px) {
-      .slider-detail .carousel-caption p {
-        margin-bottom: 10px; } }
-  .slider-detail .carousel-indicators {
-    left: -70%; }
+      top: 30px;
+  }
+  
+  .slider-detail .carousel-caption h5 {
+      font-size: 28px;
+  }
+  
+  .slider-detail .carousel-caption p {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  .slider-detail .carousel-caption p {
+      margin-bottom: 10px;
+  }
+}
+
+.slider-detail .carousel-indicators {
+  left: -70%;
+}
+
+.slider-detail .btn-default {
+  background-color: #FFF;
+  color: #444;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 792px) {
   .slider-detail .btn-default {
-    background-color: #FFF;
-    color: #444;
-    font-weight: 600; }
-    @media screen and (max-width: 792px) {
-      .slider-detail .btn-default {
-        padding: 5px;
-        font-size: 13px; } }
+      padding: 5px;
+      font-size: 13px;
+  }
+}
 
 /* ===================================== Key Features CSS ================================== */
 .key-features .kvxol {
-  padding: 0px; }
+  padding: 0px;
+}
+
 .key-features .single-key {
   background-color: #FFF;
   margin-bottom: 30px;
   text-align: center;
-  padding: 30px; }
-  .key-features .single-key i {
-    background-color: #FFF;
-    padding: 20px;
-    font-size: 42px;
-    color: #00ab9f;
-    margin-bottom: 30px;
-    border-radius: 50px; }
-  .key-features .single-key p {
-    font-family: "mouse-300", Arial, Helvetica, sans-serif;
-    font-size: 15px; }
+  padding: 30px;
+}
+
+.key-features .single-key i {
+  background-color: #FFF;
+  padding: 20px;
+  font-size: 42px;
+  color: #6C63FF;
+  margin-bottom: 30px;
+  border-radius: 50px;
+}
+
+.key-features .single-key p {
+  font-family: "mouse-300", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
 .key-features .ky-1 {
   background-color: #03509e;
   color: #FFF;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+}
+
 .key-features .ky-2 {
   background-color: #0085bc;
   color: #FFF;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+}
 
 .department {
   padding: 80px 50px;
-  background-color: #FFF; }
-  @media screen and (max-width: 940px) {
-    .department {
-      padding: 50px 10px; } }
+  background-color: #FFF;
+}
+
+@media screen and (max-width: 940px) {
+  .department {
+      padding: 50px 10px;
+  }
+}
+
 
 /* ===================================== Our Blog CSS ================================== */
 .our-blog {
@@ -424,7 +475,12 @@ header {
 .about-us .abut-yoiu {
   padding: 50px;
   background-color: #FFF; }
-
+.about-us .hospital {
+    color: #6C63FF;
+    font-size: 3rem;
+    text-transform: capitalize; }
+.about-us h3 {
+    font-size: 3rem; }
 /* ===================================== Gallery Style  ================================== */
 .gallery-filter {
   width: 100%;
@@ -557,6 +613,7 @@ header {
 /* Root Variables */
 :root {
   --purple: #6C63FF;
+  --dark-purple:#5E54E2;
   --black: #444;
   --light-color: #777;
   --box-shadow: .5rem .5rem 0 rgba(125, 62, 161, 0.253);
@@ -681,7 +738,7 @@ header {
 }
 
 .services .box .btn:hover {
-  background-color: var(--light-color);
+  background-color:#5E54E2;
 }
 
 
@@ -763,7 +820,7 @@ section.doctors {
 }
 
 .share a:hover {
-  color: var(--light-color);
+  color: #5E54E2;
 }
 
 /* Hover effect on box */

@@ -47,7 +47,6 @@ echo "<script>window.location.href ='index.php'</script>";
                             <li><a href="#">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#about_us">About Us</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
                             <li><a href="#contact_us">Contact Us</a></li>
                             <li><a href="#logins">Logins</a></li>  
                         </ul>
@@ -110,8 +109,7 @@ echo "<script>window.location.href ='index.php'</script>";
      <section id="logins" class="our-blog container-fluid">
         <div class="container">
         <div class="inner-title">
-
-                <h2>Logins</h2>
+                <h2>Select <span class="login">Logins</span</h2>
             </div>
             <div class="col-sm-12 blog-cont">
                 <div class="row no-margin">
@@ -170,8 +168,8 @@ echo "<script>window.location.href ='index.php'</script>";
     <div class="row no-margin">
         <div class="col-sm-6 image-bg no-padding"></div> <!-- Background Image Here -->
         <div class="col-sm-6 abut-yoiu">
-            <h3>About Our Hospital</h3>
-            <!-- Content pulled from the database -->
+        <h3>Our <span class="hospital">Hospital</span></h3>
+        <!-- Content pulled from the database -->
             <?php
             $ret = mysqli_query($con, "select * from tblpage where PageType='aboutus'");
             while ($row = mysqli_fetch_array($ret)) {
@@ -280,9 +278,9 @@ echo "<script>window.location.href ='index.php'</script>";
 <div class="box-container">
 
     <div class="box">
-        <img src="image/doctor ram.jpg" alt="">
+        <img src="assets/images/doctor.jpg" alt="">
         <h3>Dr.RAM</h3>
-        <span>cardiologist</span>
+        <span>Cardiologist</span>
         <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
@@ -292,9 +290,9 @@ echo "<script>window.location.href ='index.php'</script>";
     </div>
 
     <div class="box">
-        <img src="image/doctor natasha.jpg" alt="">
+        <img src="assets/images/dental.jpg" id="dental-image"alt="">
         <h3>Dr.NATASHA</h3>
-        <span>expert doctor</span>
+        <span>Dental Expert</span>
         <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
@@ -304,7 +302,7 @@ echo "<script>window.location.href ='index.php'</script>";
     </div>
 
     <div class="box">
-        <img src="image/doctor laxman.png" alt="">
+        <img src="assets/images/Neuro.jpg" alt="">
         <h3>Dr.JOHN</h3>
         <span>Neurologist</span>
         <div class="share">
@@ -415,7 +413,11 @@ echo "<script>window.location.href ='index.php'</script>";
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 
 <script src="assets/js/script.js"></script>
-
+<script>
+     document.getElementById('dental-image').addEventListener('click', function() {
+        window.location.href = 'code.php'; // Redirects to code.php
+    });
+    </script>
 
 
 </html>
